@@ -1,23 +1,26 @@
-using namespace std; 
- 
-#include <iostream> 
-#include <cmath>
-
-int main()  { 
- int N, i, a;
- cout << "N: " << endl;
- cin >> N ;
- int* A = new int[N]; 
- for (i=0; i<N; i++) {
- 	cin >> A[i];
- }
- a=0;
- for (i=0; i<N; i++) {
- 	if (i%2==1) { 
- 	cout << " " << A[N-1-a] << endl;
- 	a++;
- 	}
- 	else { cout << " " << A[i-a] << endl; }
- }
- return 0;
+#include <iostream>
+#include <math.h>
+#include <vector>
+using namespace std;
+int main()
+{
+  cout<<"Vvedite N"<<endl;
+  int n;
+  cin>>n;
+  vector<float> a(n);
+  cout<<"Vvedite elemeti massiva"<<endl;
+  for (int i=0; i<n; i++)
+  {
+    cin>>a[i];
+  }
+  for (int i=0; i<n/2; i++)
+  {
+    cout<<a[i]<<endl;
+    cout<<a[n-i-1]<<endl;
+  }
+  if (n%2==1)
+  {
+    cout<<a[n/2];
+  }
+  return 0;
 }
