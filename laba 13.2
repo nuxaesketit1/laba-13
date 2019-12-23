@@ -1,16 +1,21 @@
-using namespace std; 
- 
-#include <iostream> 
-#include <cmath>
+#include <iostream>
+#include <math.h>
+#include <vector>
 
-int main()  { 
- int N, i, k, a, D;
- cout << "N, A, D: " << endl;
- cin >> N >> a >> D;
- int* A = new int[N]; 
- for (i=0; i<N; i++) {
- 	A[i]=a*pow(D,i);
- 	cout<< " " << A[i] << endl;
- }
- return 0;
- }
+using namespace std;
+int main()
+{
+	cout << "Vvedite N" << endl;
+	int n;
+	float a, d;
+	cin >> n;
+	cout << "Vvedite A and D" << endl;
+	cin >> a >> d;
+	vector<float> arr(n);
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = a * pow(d, i);
+		cout << arr[i] << endl;
+	}
+	return 0;
+}
