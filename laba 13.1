@@ -1,17 +1,19 @@
-using namespace std; 
- 
-#include <iostream> 
- 
-int main()  { 
-setlocale(LC_ALL, "Russian");
- int N, i;
- cout << "Введите размер массива: "; 
- cin >> N; 
- int* A = new int[N]; 
- for (i=0; i<=N;i++) {
- 	A[0]=1;
- 	A[i+1]=A[i]+2;
- 	cout << A[i] << endl;
- }
- return 0;
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main()
+{
+	cout << "Vvedite N" << endl;
+	int n;
+	cin >> n;
+
+	vector<int> arr(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = i * 2 + 1;
+		cout << arr[i] << endl;
+	}
+	return 0;
 }
